@@ -1,0 +1,63 @@
+.page-header {
+  background-repeat: no-repeat;
+  background-position: center bottom;
+  background-size: cover;
+  .container {
+    position: relative;
+    height: 100vh;
+    min-height: 600px;
+  }
+
+  &__top {
+    position: absolute;
+    top: 100px;
+    left: 0;
+    right: 0;
+    .clearfix;
+    @media @phone {
+      top: 30px;
+    }
+  }//top
+
+  &__phone {
+    float: left;
+    font-weight: 500;
+    opacity: 0.6;    
+    color: #fff;
+    @media @phone {
+      float: right;
+      display: block;
+    }
+  }//phone
+
+  &__call {
+    float: right;      
+    font-weight: 500;
+    color: #fff;
+    opacity: 0.6;
+    text-transform: uppercase;
+    border-bottom: 1px dashed #fff;
+    @media @phone {
+      clear: right;
+    }
+  }//call
+
+  &__logo {
+    position: absolute;
+    left: 50%;
+    top: -40px;
+    transform: translateX(-50%);
+    @media @phone {
+      left: 0;
+      top: 0;
+      transform: none;
+    }
+    .icon-logo {
+      fill: #fff;    
+      @media @phone {
+        height: 50px;
+      }  
+    }
+  }//logo
+
+}

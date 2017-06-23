@@ -1,0 +1,32 @@
+.main-nav {
+  position: absolute;
+  bottom: 60px;
+  left: 0;
+  right: 0;
+  @media @phone {
+    position: static;
+    padding-top: 200px;
+  }
+  &__list {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    @media @phone {
+      display: block;
+      text-align: center;      
+    }
+  }
+  &__item {
+    color: #fff;
+    text-transform: uppercase;
+    font-weight: 500;
+    @media @phone {
+      margin-bottom: 10px;
+    }
+    a {
+      color: inherit;
+    }   
+  }
+}
