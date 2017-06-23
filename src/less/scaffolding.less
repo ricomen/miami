@@ -95,6 +95,7 @@ textarea {
       margin-bottom: 40px;
       left: 0;
       top: 0;
+      font-size: 32px;
       transform: none;
       text-align: center;
     }
@@ -126,11 +127,20 @@ textarea {
     padding-right: 90px;
     width: 60%;
     box-sizing: border-box;
+    @media @phone {
+      float: none;
+      width: auto;
+      padding-right: 0;
+    }
   }
 
   &__right {
     float: right;
     width: 40%;
+    @media @phone {
+      float: none;
+      width: auto;
+    }
   }
 
   &__bottom {
@@ -179,15 +189,34 @@ textarea {
       color: #00aaef;
     }
   }//title
+
   &__photos {
     margin-bottom: 16px;
+    display: flex;
+    justify-content: space-between;    
+    @media @phone {
+      flex-direction: column;
+    }
   }//photos
-  &__photo {
+
+  &__photo {    
+    height: 260px;
+    width: 48%;
     background-repeat: no-repeat;
     background-size: cover;
     background-position: 50% 50%;
-    height: 300px;
-  }
+    box-sizing: border-box;
+    @media @phone {
+      width: 100%;
+      margin-bottom: 10px;
+    }
+    &--wide {
+      width: 64%;
+    }
+    &--short {
+      width: 31%;      
+    }
+  }//photo
 }
 .testimonials {
   &__list {
@@ -199,17 +228,31 @@ textarea {
     }
   }
 }
-.person {
-  
+.person {  
   text-align: center;
   box-sizing: border-box;
-
+  @media @phone {
+    margin-bottom: 20px;
+  }
   &__photo {
-    .center;
+    display: inline-block;
+    vertical-align: top;
+    position: relative;    
+    margin-bottom: 10px;
     width: 147px;
-    height: 147px;
-    border-radius: 50%;
-    overflow: hidden;
+    height: 147px;    
+    img {
+      border-radius: 50%;
+    }
+    &:before {
+      margin-top: -25px;      
+      position: absolute;
+      content: '\201C';
+      font-size: 80px;
+      font-family: serif;
+      top: 50%;
+      left: -30px;
+    }
   }//photo
 
   &__name {
@@ -219,7 +262,7 @@ textarea {
   }//name
 
   &__position {
-    margin-bottom: 35px;
+    margin-bottom: 15px;
     color: #696973;
   }//position
 

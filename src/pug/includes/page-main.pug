@@ -1,4 +1,4 @@
-section.section.best
+section.section.best#about
   .container
     .best__motto Miami best Realry
       span &mdash;<br>this
@@ -13,15 +13,15 @@ section.section.best
       p 
         b We will never late!<br>Guaranteed secure transaction - 100%
   
-section.section.gallery
+section.section.gallery#gallery
   .container
     h2.section__title Gallery
       +icon("decor", 20, 13)
 
-    article.apart.apart--right
+    article.apart
       .apart__photos
-        .apart__photo(style="background-image: url('img/content/apart-1.jpg')")
-        .apart__photo(style="background-image: url('img/content/apart-2.jpg')")
+        .apart__photo.apart__photo--wide(style="background-image: url('img/content/apart-1.jpg')")
+        .apart__photo.apart__photo--short(style="background-image: url('img/content/apart-2.jpg')")
       h2.apart__title Marina Palms / 
         span North Miami Beach, FL 33162
 
@@ -32,17 +32,17 @@ section.section.gallery
       h2.apart__title Edition Residens / 
         span Miami Beach, FL 33139
 
-    article.apart.apart--left
+    article.apart
       .apart__photos
-        .apart__photo(style="background-image: url('img/content/apart-5.jpg')")
-        .apart__photo(style="background-image: url('img/content/apart-6.jpg')")
+        .apart__photo.apart__photo--short(style="background-image: url('img/content/apart-5.jpg')")
+        .apart__photo.apart__photo--wide(style="background-image: url('img/content/apart-6.jpg')")
       h2.apart__title Faena House / 
         span Miami Beach, FL 33140
 
     .section__bottom
       a(href="/").btn.btn--inline View All 
 
-section.section.consultation
+section.section.consultation#consult
   .container
     h2.section__title Consultation
       +icon("decor", 20, 13)
@@ -60,7 +60,7 @@ section.section.consultation
         .form__submit
           button(type="button").btn Consultation
 
-section.section.testimonials
+section.section.testimonials#testi
   .container
     h2.section__title Testimonials
       +icon("decor", 20, 13)
@@ -90,7 +90,7 @@ section.section.testimonials
         .person__descr
           p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magni, unde.
 
-section.section.contact
+section.section.contact#contacts
   .container
     h2.section__title Contact
       +icon("decor", 20, 13)
